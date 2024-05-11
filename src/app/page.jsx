@@ -90,6 +90,12 @@ export default function Home({}) {
           <h5>America</h5>
         </div>
       </div>
+
+      <div className={styles.endButton}>
+        <Button variant="contained" href="#contained-buttons">
+          Explore Our Services
+        </Button>
+      </div>
     </>
   );
 }
