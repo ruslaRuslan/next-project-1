@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import { Button } from "@mui/material";
-export default function Home() {
+export default function Home({}) {
   return (
     <>
       <div className={styles.container}>
@@ -26,22 +26,35 @@ export default function Home() {
         </div>
       </div>
 
-      <div class={styles.verticalLine}>
-        <ul>
-          <li className={styles.liOne}>Are you experlencing</li>
-          <li>Первый пункт</li>
-          <li>Второй пункт</li>
-          <li>Третий пункт</li>
-          <li>Третий пункт</li>
-          <li>Третий пункт</li>
-          <li>Тbhgvfcvgbvf</li>
-          <li>Тbhgvfcvgbvf</li>
-          <li>Тbhgvfcvgbvf</li>
-          <li>Тbhgvfcvgbvf</li>
-          <li>Тbhgvfcvgbvf</li>
-          <li>Тbhgvfcvgbvf</li>
-          <li>Тbhgvfcvgbvf</li>
-        </ul>
+      <div className={styles.container2}>
+        <div class={styles.verticalLine}>
+          <p className={styles.liOne}>Are you experlencing</p>
+          <ul>
+            <li>Первый пункт</li>
+            <li>Второй пункт</li>
+            <li>Третий пункт</li>
+          </ul>
+        </div>
+        <div className={styles.text}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            neque deleniti nulla dolorem quos labore officia rem molestiae
+            similique ut, possimus, porro tempora fuga earum fugiat cumque
+            ratione? Vero, praesentium! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Suscipit tempore facere, quasi architecto
+            consectetur optio in numquam beatae veniam soluta asperiores nam
+            dolore corrupti sequi non assumenda ut saepe nobis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            neque deleniti nulla dolorem quos labore officia rem molestiae
+            similique ut, possimus, porro tempora fuga earum fugiat cumque
+            ratione? Vero, praesentium! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Suscipit tempore facere, quasi architecto
+            consectetur optio in numquam beatae veniam soluta asperiores nam
+            dolore corrupti sequi non assumenda ut saepe nobis.
+          </p>
+        </div>
       </div>
     </>
   );
