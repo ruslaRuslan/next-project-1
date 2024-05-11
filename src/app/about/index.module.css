@@ -7,3 +7,26 @@
   color: #fff;
   padding-bottom: 1rem;
 }
+
+.OurTeam {
+  text-align: center;
+}
+
+.threeCardAbout {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.threeCardAbout * {
+  text-decoration: none;
+  text-align: center;
+}
+
+.btnContact {
+  background-color: #000;
+}
+.btnContact:hover {
+  background-color: #474e5e;
+}
