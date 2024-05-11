@@ -67,6 +67,7 @@ export default function Home({}) {
             width={350}
             height={400}
           />
+          <h5>Amsterdam</h5>
         </div>
 
         <div className={styles.card2}>
@@ -76,6 +77,7 @@ export default function Home({}) {
             width={350}
             height={400}
           />
+          <h5>Italiya</h5>
         </div>
 
         <div className={styles.card3}>
@@ -85,6 +87,7 @@ export default function Home({}) {
             width={350}
             height={400}
           />
+          <h5>America</h5>
         </div>
       </div>
     </>

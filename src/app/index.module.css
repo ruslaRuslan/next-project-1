@@ -50,3 +50,10 @@
   justify-content: center;
   gap: 1rem;
 }
+.threeCard .card1,
+.card2,
+.card3 {
+  background-color: gray;
+  padding: 10px 10px 25px 10px;
+  text-align: center;
+}
