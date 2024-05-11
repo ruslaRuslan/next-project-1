@@ -1,6 +1,53 @@
 .box * {
-    text-decoration: none;
-    color: #000;
-    margin: 0.8rem;
-    font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  margin: 0.9rem;
+  font-size: 1.5rem;
+}
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box2 * {
+  border-radius: 20px;
+}
+
+.box2 {
+  background-color: #111111;
+  color: #fff;
+  padding-top: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.facebook,
+.instagram,
+.twitter,
+.google,
+.youtube {
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  padding: 4.5px;
+  margin-left: 10px;
+}
+
+.bottoms {
+  margin-top: 1rem;
+}
+
+.bottoms * {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15.5px;
+}
+
+.endFooter {
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+
 }

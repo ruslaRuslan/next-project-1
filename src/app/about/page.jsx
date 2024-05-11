@@ -3,7 +3,6 @@ import { Button, IconButton } from "@mui/material";
 import styles from "./index.module.css";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import YouTubeIcon from '@mui/icons-material/YouTube';
-
 const AboutPage = () => {
   return (
     <>
