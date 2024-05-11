@@ -1,14 +1,10 @@
-.box * {
-  text-decoration: none;
-  color: #000;
-  margin: 0.9rem;
-  font-size: 1.5rem;
-}
+
 .body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .box2 * {
   border-radius: 20px;
 }
@@ -49,5 +45,4 @@
   color: #fff;
   background-color: #000;
   text-align: center;
-
 }
