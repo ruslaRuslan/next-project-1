@@ -1,26 +1,17 @@
 "use client";
 import { Button, IconButton } from "@mui/material";
 import styles from "./index.module.css";
-import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-const AboutPage = () => {
+
+const AboutPage = ({}) => {
   return (
     <>
-      <div>AboutPage</div>
-      <IconButton>
-        <AccessAlarmIcon />
-      </IconButton>
-      <IconButton
-        onClick={() => {
-          alert("Ruslan");
-        }}
-      >
-        <YouTubeIcon style={{ color: "red" }} />
-      </IconButton>
-      <Button className={styles.btn} variant="outlined">
-        bura klikle
-      </Button>
-      <Button variant="outlined">bura klikle</Button>
+      <div className={styles.H1p}>
+        <h1>About Us Page</h1>
+        <p>Some text who we are and what we do</p>
+        <p>
+          Resize the browswer window to see that page is responsive by the way
+        </p>
+      </div>
     </>
   );
 };
