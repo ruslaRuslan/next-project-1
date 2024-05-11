@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import { Button } from "@mui/material";
-export default function Home({}) {
+export default function Home() {
   return (
     <>
       <div className={styles.container}>
@@ -92,9 +92,7 @@ export default function Home({}) {
       </div>
 
       <div className={styles.endButton}>
-        <Button variant="contained" href="#contained-buttons">
-          Explore Our Services
-        </Button>
+        <Button variant="contained">Explore Our Services</Button>
       </div>
     </>
   );

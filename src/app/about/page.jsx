@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import { Button } from "@mui/material";
 
-const AboutPage = ({}) => {
+const AboutPage = () => {
   return (
     <>
       <div className={styles.H1p}>
@@ -40,6 +40,7 @@ const AboutPage = ({}) => {
             alt=""
             width={400}
             height={350}
+            loading="lazy"
           />
           <p>Ceo & Founder</p>
           <p>Some text that describes me lorem ipsum ipsum lorem</p>
