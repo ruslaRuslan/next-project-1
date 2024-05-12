@@ -25,7 +25,7 @@ export default function index() {
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     <p>
-                      {id}.{name}
+                      {id}. {name}
                     </p>
                   </Typography>
                   <Typography
