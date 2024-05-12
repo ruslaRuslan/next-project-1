@@ -38,6 +38,7 @@ const Contact = () => {
             id="filled-basic"
             label="Write something.."
             variant="filled"
+            size="large"
             className={styles.subject}
           />
         </div>
