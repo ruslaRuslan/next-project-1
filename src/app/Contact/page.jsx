@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import styles from "./index.module.css";
 import { TextField } from "@mui/material";
-// import CountrySelect from "@/components/CountrySelect/page";
+import CountrySelect from "@/components/CountrySelect/county";
 
 const Contact = () => {
   return (
@@ -19,41 +20,26 @@ const Contact = () => {
           className={styles.PhotoContact}
         />
         <div className={styles.inputContainer}>
-          <div>
-            <p>First Name</p>
-            <TextField
-              id="filled-basic"
-              label="Your name..."
-              variant="filled"
-            />
-          </div>
+          <p>First Name</p>
+          <TextField id="filled-basic" label="Your name..." variant="filled" />
 
-          <div>
-            <p>Last Name</p>
-            <TextField
-              id="filled-basic"
-              label="Your name..."
-              variant="filled"
-            />
-          </div>
-          <div>
-            <p>Country</p>
-            <TextField
-              id="filled-basic"
-              label="Your name..."
-              variant="filled"
-            />
-          </div>
+          <p>Last Name</p>
+          <TextField
+            id="filled-basic"
+            label="Your last name..."
+            variant="filled"
+          />
 
-          <div>
-            <p>Subject</p>
-            <TextField
-              id="filled-basic"
-              label="Your name..."
-              variant="filled"
-            />
-            {/* <CountrySelect /> */}
-          </div>
+          <p>Country</p>
+          <CountrySelect />
+
+          <p>Subject</p>
+          <TextField
+            id="filled-basic"
+            label="Write something.."
+            variant="filled"
+            className={styles.subject}
+          />
         </div>
       </div>
     </>

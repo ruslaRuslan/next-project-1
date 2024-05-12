@@ -1,11 +1,15 @@
 .ContactAndText * {
   text-align: center;
 }
+
 .contactContainer {
   display: flex;
-  justify-content: center;
 }
 
 .PhotoContact {
-  margin-right: 3rem;
+  margin: 0.9rem 5rem 0 15px;
+}
+
+.subject {
+  max-width: max-content;
 }

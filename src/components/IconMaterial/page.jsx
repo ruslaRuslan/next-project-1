@@ -16,7 +16,6 @@ const IconMaterial = ({}) => {
         <IconButton>
           <FacebookOutlinedIcon className={styles.facebook} />
         </IconButton>
-
         <IconButton>
           <InstagramIcon className={styles.instagram} />
         </IconButton>
