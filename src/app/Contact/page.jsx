@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import { TextField } from "@mui/material";
-import CountrySelect from "@/components/CountrySelect/county";
+import CountrySelect from "@/components/CountrySelect";
 
 const Contact = () => {
   return (

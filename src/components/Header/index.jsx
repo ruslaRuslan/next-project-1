@@ -19,25 +19,25 @@ import Link from "next/link";
 
 const drawerWidth = 240;
 const navItems = [
-  <Link style={{ textDecoration: "none", color: "#fff" }} href="/" passHref>
+  <Link style={{ color: "black", textDecoration: "none" }} href="/" passHref>
     Home
   </Link>,
   <Link
-    style={{ textDecoration: "none", color: "#fff" }}
+    style={{ color: "black", textDecoration: "none" }}
     href="/about"
     passHref
   >
     About
   </Link>,
   <Link
-    style={{ textDecoration: "none", color: "#fff" }}
+    style={{ color: "black", textDecoration: "none" }}
     href="/contact"
     passHref
   >
     Contact
   </Link>,
   <Link
-    style={{ textDecoration: "none", color: "#fff" }}
+    style={{ color: "black", textDecoration: "none" }}
     href="/users"
     passHref
   >
@@ -56,7 +56,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Ruslan
       </Typography>
       <Divider />
       <List>
@@ -97,7 +97,14 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button
+                key={item}
+                sx={{
+                  "& > a": {
+                    color: "#fff !important",
+                  },
+                }}
+              >
                 {item}
               </Button>
             ))}

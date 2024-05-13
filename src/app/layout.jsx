@@ -1,5 +1,5 @@
-import Footer from "@/Footer/page";
-import Header from "@/Header/page";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "Esas title",

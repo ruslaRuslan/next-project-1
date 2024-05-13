@@ -1,4 +1,4 @@
-import IconMaterial from "@/components/IconMaterial/page";
+import IconMaterial from "@/components/IconMaterial";
 
 const Footer = ({}) => {
   return (

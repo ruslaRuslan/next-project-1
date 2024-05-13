@@ -20,7 +20,6 @@ export default async function index({ params }) {
     >
       <Card
         sx={{
-          maxWidth: 345,
           border: "1px solid #000",
           background: "#000",
           color: "#fff",
@@ -30,7 +29,7 @@ export default async function index({ params }) {
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               <p style={{ textAlign: "center" }}>
-                <b>{data.id}.</b>
+                <b>№ {data.id}</b>
               </p>
               <p>
                 <b>name: </b>

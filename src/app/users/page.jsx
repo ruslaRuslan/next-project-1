@@ -4,6 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Grid } from "@mui/material";
+import Link from "next/link";
 
 const url = "https://jsonplaceholder.typicode.com/users";
 
@@ -24,9 +25,12 @@ export default function index() {
               <CardActionArea>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    <p>
+                    <Link
+                      href={`/users/${id}`}
+                      style={{ textDecoration: "none", color: "#000" }}
+                    >
                       {id}. {name}
-                    </p>
+                    </Link>
                   </Typography>
                   <Typography
                     variant="body2"
