@@ -1,6 +1,14 @@
+import * as React from "react";
 import Image from "next/image";
 import styles from "./index.module.css";
-import { Button } from "@mui/material";
+import { Button, Grid } from "@mui/material";
+
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
+
 export default function Home() {
   return (
     <>
@@ -57,39 +65,65 @@ export default function Home() {
         </div>
       </div>
 
-      <h4 className={styles.help}>How we can help</h4>
+      <Typography className={styles.help} variant="h4">
+        How we can help
+      </Typography>
 
-      <div className={styles.threeCard}>
-        <div className={styles.card1}>
-          <Image
-            src="https://media.istockphoto.com/id/1248448159/photo/villefranche-sur-mer-village-in-france.jpg?s=612x612&w=0&k=20&c=sGQxaH_1v9lgHy9Cq5RMAx3WPPyI1sL84paxr0f3UoI="
-            alt=""
-            width={350}
-            height={400}
-          />
-          <h5>Amsterdam</h5>
-        </div>
+      <Grid container gap={2} justifyContent="center">
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ maxWidth: 445 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="440"
+                image="https://media.istockphoto.com/id/1248448159/photo/villefranche-sur-mer-village-in-france.jpg?s=612x612&w=0&k=20&c=sGQxaH_1v9lgHy9Cq5RMAx3WPPyI1sL84paxr0f3UoI="
+                alt=""
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Amsterdam
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
 
-        <div className={styles.card2}>
-          <Image
-            src="https://media.istockphoto.com/id/1146661437/video/nice-france-gimbal-sunrise-shot-of-street-with-color-houses-in-old-town-of-nice-france-4k.jpg?s=640x640&k=20&c=JU0Sv0nbUv9PfMc01LxC1zHTBv8-msYOblTfNOnDGqU="
-            alt=""
-            width={350}
-            height={400}
-          />
-          <h5>Italiya</h5>
-        </div>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ maxWidth: 445 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="440"
+                image="https://media.istockphoto.com/id/1146661437/video/nice-france-gimbal-sunrise-shot-of-street-with-color-houses-in-old-town-of-nice-france-4k.jpg?s=640x640&k=20&c=JU0Sv0nbUv9PfMc01LxC1zHTBv8-msYOblTfNOnDGqU="
+                alt=""
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  America
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
 
-        <div className={styles.card3}>
-          <Image
-            src="https://media.istockphoto.com/id/640923722/photo/view-of-nice-france.jpg?s=2048x2048&w=is&k=20&c=ReaUHhdsu8bo1e4y5AtCs0PMMw6wJA-kNoTZ6x4gkjo="
-            alt=""
-            width={350}
-            height={400}
-          />
-          <h5>America</h5>
-        </div>
-      </div>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ maxWidth: 445 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="440"
+                image="https://media.istockphoto.com/id/640923722/photo/view-of-nice-france.jpg?s=2048x2048&w=is&k=20&c=ReaUHhdsu8bo1e4y5AtCs0PMMw6wJA-kNoTZ6x4gkjo="
+                alt=""
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Niderland
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+      </Grid>
 
       <div className={styles.endButton}>
         <Button variant="contained">Explore Our Services</Button>
