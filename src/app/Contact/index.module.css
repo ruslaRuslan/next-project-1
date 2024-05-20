@@ -1,17 +1,14 @@
-.ContactAndText * {
+.ContactAndText {
   text-align: center;
 }
 
-.contactContainer {
-  display: flex;
+.btn:hover {
+  background-color: rgb(51, 51, 174);
 }
 
-.PhotoContact {
-  margin: 0.9rem 5rem 0 15px;
+@media (max-width: 576px) {
+  .btn {
+    display: block;
+    margin: 20px auto;
+  }
 }
-
-.subject {
-  max-width: max-content;
-}
-
-/* fullWith */

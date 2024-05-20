@@ -1,48 +1,65 @@
 "use client";
-import Image from "next/image";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 import styles from "./index.module.css";
-import { TextField } from "@mui/material";
+import { Box, Button, Grid, TextField } from "@mui/material";
 import CountrySelect from "@/components/CountrySelect";
 
 const Contact = () => {
   return (
     <>
-      <div className={styles.ContactAndText}>
-        <h1>Contact Us</h1>
+      <Box className={styles.ContactAndText}>
+        <Typography variant="h3">Contact Us</Typography>
         <p>Swing by for a cup of coffee, or leave us a message</p>
-      </div>
-      <div className={styles.contactContainer}>
-        <Image
-          src="https://media.istockphoto.com/id/501860305/photo/small-town-main-street.jpg?s=612x612&w=0&k=20&c=K5XEDmnilpD_BfI8MVeltirOrNOvmmD9-bQOrumgxUM="
-          alt=""
-          width={550}
-          height={350}
-          className={styles.PhotoContact}
-        />
-        <div className={styles.inputContainer}>
+      </Box>
+
+      <Grid container>
+        <Grid item xs={12} md={6} lg={5} sx={{ padding: " 0 1rem 0 1rem" }}>
+          <Box>
+            <Card sx={{ maxWidth: 680 }} className={styles.photo}>
+              <CardMedia
+                component="img"
+                height="450"
+                image="https://media.istockphoto.com/id/501860305/photo/small-town-main-street.jpg?s=612x612&w=0&k=20&c=K5XEDmnilpD_BfI8MVeltirOrNOvmmD9-bQOrumgxUM="
+                alt=""
+              />
+            </Card>
+          </Box>
+        </Grid>
+
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={7}
+          sx={{ paddingRight: "1rem", paddingLeft: "1rem" }}
+        >
           <p>First Name</p>
-          <TextField id="filled-basic" label="Your name..." variant="filled" />
-
+          <TextField fullWidth label="Your name.." id="fullWidth" />
           <p>Last Name</p>
-          <TextField
-            id="filled-basic"
-            label="Your last name..."
-            variant="filled"
-          />
-
+          <TextField fullWidth label="Your last name.." id="fullWidth" />
           <p>Country</p>
           <CountrySelect />
 
           <p>Subject</p>
           <TextField
-            id="filled-basic"
+            fullWidth
             label="Write something.."
-            variant="filled"
-            size="large"
-            className={styles.subject}
+            id="message"
+            multiline
+            rows={10}
           />
-        </div>
-      </div>
+          <Button
+            variant="contained"
+            sx={{ margin: "10px 10px", bgcolor: "#04A96C" }}
+            className={styles.btn}
+          >
+            Submit
+          </Button>
+        </Grid>
+      </Grid>
     </>
   );
 };
