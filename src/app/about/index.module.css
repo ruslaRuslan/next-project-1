@@ -1,33 +1,25 @@
-.btn {
-  margin-right: 20px;
-}
 .H1p {
   text-align: center;
   background-color: #474e5e;
   color: #fff;
-  padding-bottom: 1rem;
+  padding: 10px 0 1rem 0;
 }
 
 .OurTeam {
   text-align: center;
 }
 
-.threeCardAbout {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+.threeCard {
   margin-bottom: 2rem;
 }
 
-.threeCardAbout * {
-  text-decoration: none;
-  text-align: center;
+@media (max-width: 576px) {
+  .threeCard {
+    margin: 0 8px 0 8px;
+  }
 }
 
-.btnContact {
-  margin-top: 1rem;
-  background-color: #000;
-}
-.btnContact:hover {
-  background-color: #474e5e;
+.email {
+  text-decoration: none;
+  color: #000;
 }

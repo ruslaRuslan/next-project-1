@@ -93,11 +93,13 @@ export default function Home() {
       </Typography>
 
       <Grid
+        margin="5px"
+        gap={2}
         container
         justifyContent="center"
         style={{ padding: "0 10px 0 11px" }}
       >
-        <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
               <CardMedia
@@ -120,7 +122,7 @@ export default function Home() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
               <CardMedia
@@ -143,7 +145,7 @@ export default function Home() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
               <CardMedia

@@ -1,72 +1,123 @@
 "use client";
-
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import styles from "./index.module.css";
-import Image from "next/image";
-import { Button } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 
 const AboutPage = () => {
   return (
     <>
-      <div className={styles.H1p}>
-        <h1>About Us Page</h1>
+      <Box className={styles.H1p}>
+        <Typography variant="h4">About Us Page</Typography>
         <p>Some text who we are and what we do</p>
         <p>
           Resize the browswer window to see that page is responsive by the way
         </p>
-      </div>
+      </Box>
       <h3 className={styles.OurTeam}>Our Team</h3>
-      <div className={styles.threeCardAbout}>
-        <div className={styles.card1}>
-          <Image
-            src="https://marketinghousemedia.com/wp-content/uploads/2019/11/Blog-Post-Free-Stock-Images-River-Mountain-Forest-1080x675-1200x900.jpg"
-            alt=""
-            width={400}
-            height={350}
-          />
 
-          <p>Ceo & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem</p>
-          <Link href="#">jane@example.com</Link>
-          <br />
-          <Button variant="contained" className={styles.btnContact}>
-            Contact
-          </Button>
-        </div>
+      <Grid container justifyContent="center" gap={2}>
+        <Grid className={styles.threeCard} item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ maxWidth: 400 }}>
+            <CardMedia
+              component="img"
+              height="350"
+              image="https://images.ctfassets.net/i3kf1olze1gn/6fNQ8Vd9s5S5DB8JcHkDis/a5a4b8daf60b791a200567422f1fc50e/Nice_reasons_to_visit_nice.jpg"
+              alt=""
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Jane Doe
+              </Typography>
+              <p>Some text that describes me lorem ipsum ipsum lorem</p>
+              <Link className={styles.email} href="#">
+                jane@example.com
+              </Link>
+            </CardContent>
+            <Button
+              sx={{
+                width: "94%",
+                display: "block",
+                margin: "0 auto",
+                marginBottom: "10px",
+                borderRadius: 0,
+                backgroundColor: "#000",
+              }}
+              variant="contained"
+            >
+              Contact
+            </Button>
+          </Card>
+        </Grid>
 
-        <div className={styles.card1}>
-          <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXR4zVgiiTcKXgDmYkIJX19ACX92KVhOEYA&s"
-            alt=""
-            width={400}
-            height={350}
-            loading="lazy"
-          />
-          <p>Ceo & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem</p>
-          <Link href="#">jane@example.com</Link>
-          <br />
-          <Button variant="contained" className={styles.btnContact}>
-            Contact
-          </Button>
-        </div>
-
-        <div className={styles.card3}>
-          <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgXLdJ523pCWBv334jUnOjSWL29NpygaRPoA&s"
-            alt=""
-            width={400}
-            height={350}
-          />
-          <p>Ceo & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem</p>
-          <Link href="#">jane@example.com</Link>
-          <br />
-          <Button variant="contained" className={styles.btnContact}>
-            Contact
-          </Button>
-        </div>
-      </div>
+        <Grid className={styles.threeCard} item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ maxWidth: 400 }}>
+            <CardMedia
+              component="img"
+              height="350"
+              image="https://wanderingcarol.com/wp-content/uploads/2022/05/things-to-do-in-nice-france.jpg"
+              alt=""
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Mike Ross
+              </Typography>
+              <p>Some text that describes me lorem ipsum ipsum lorem</p>
+              <Link className={styles.email} href="#">
+                mike@example.com
+              </Link>
+            </CardContent>
+            <Button
+              sx={{
+                width: "94%",
+                display: "block",
+                margin: "0 auto",
+                marginBottom: "10px",
+                borderRadius: 0,
+                backgroundColor: "#000",
+              }}
+              variant="contained"
+            >
+              Contact
+            </Button>
+          </Card>
+        </Grid>
+        <Grid className={styles.threeCard} item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ maxWidth: 400 }}>
+            <CardMedia
+              component="img"
+              height="350"
+              image="https://a.cdn-hotels.com/gdcs/production94/d42/d1f6ab55-f7dd-4cef-9d0f-bf6d3a742491.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+              alt=""
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                John Doe
+              </Typography>
+              <p>Some text that describes me lorem ipsum ipsum lorem</p>
+              <Link className={styles.email} href="#">
+                john@example.com
+              </Link>
+            </CardContent>
+            <Button
+              sx={{
+                width: "94%",
+                display: "block",
+                margin: "0 auto",
+                marginBottom: "10px",
+                borderRadius: 0,
+                backgroundColor: "#000",
+              }}
+              variant="contained"
+            >
+              Contact
+            </Button>
+          </Card>
+        </Grid>
+      </Grid>
     </>
   );
 };
