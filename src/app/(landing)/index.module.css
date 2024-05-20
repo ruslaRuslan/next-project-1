@@ -1,15 +1,15 @@
 .container {
-  display: flex;
+  /* display: flex; */
 }
 
 .image {
-  width: 50%;
-  height: 300px;
+  /* width: 50%; */
+  /* height: 300px; */
   object-fit: cover;
 }
 
 .info {
-  width: 50%;
+  width: max-content;
   background-color: red;
   text-align: center;
 }
@@ -29,6 +29,7 @@
   border-right: 1px solid grey;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .liOne {
@@ -47,7 +48,27 @@
   margin-bottom: 1rem;
 }
 
+.center {
+  text-align: center;
+}
+
 .endButton {
   margin: 1rem 1rem;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .container2 {
+    display: block;
+  }
+  .verticalLine {
+    border-bottom: 1px solid grey;
+    border-right: 1px solid #f5f1e8;
+    margin: 0 1rem 0 1rem;
+  }
+  .container {
+    display: block;
+    width: 600px;
+    margin: 0 3rem 0 2rem;
+  }
 }

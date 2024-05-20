@@ -1,8 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import styles from "./index.module.css";
-import { Button, Grid } from "@mui/material";
-
+import { Box, Button, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -12,30 +11,31 @@ import { CardActionArea } from "@mui/material";
 export default function Home() {
   return (
     <>
-      <div className={styles.container}>
-        <Image
-          className={styles.image}
-          src="https://www.jedacademy.az/image/teacher/891676291256.jpg"
-          alt=""
-          width={500 * 0.5}
-          height={300}
-        />
-
-        <div className={styles.info}>
-          <h3>
+      <Grid container>
+        <Grid>
+          <Image
+            className={styles.image}
+            src="https://www.jedacademy.az/image/teacher/891676291256.jpg"
+            alt=""
+            width={800}
+            height={500}
+          />
+        </Grid>
+        <Grid style={{ background: "red" }} item xs={5} md={6}>
+          <Typography variant="h5">
             Ali Muelim <br /> kursun bas direktoru ve telimcisi
-          </h3>
+          </Typography>
           <Button className={styles.button} variant="contained">
             Contained
           </Button>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nemo
           </p>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
 
-      <div className={styles.container2}>
-        <div class={styles.verticalLine}>
+      <Box className={styles.container2}>
+        <div className={styles.verticalLine}>
           <p className={styles.liOne}>Are you experlencing</p>
           <ul>
             <li>Первый пункт</li>
@@ -63,14 +63,14 @@ export default function Home() {
             dolore corrupti sequi non assumenda ut saepe nobis.
           </p>
         </div>
-      </div>
+      </Box>
 
       <Typography className={styles.help} variant="h4">
         How we can help
       </Typography>
 
       <Grid container gap={2} justifyContent="center">
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
               <CardMedia
@@ -80,15 +80,20 @@ export default function Home() {
                 alt=""
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Amsterdam
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  className={styles.center}
+                >
+                  Italiya
                 </Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
               <CardMedia
@@ -98,7 +103,12 @@ export default function Home() {
                 alt=""
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  className={styles.center}
+                >
                   America
                 </Typography>
               </CardContent>
@@ -106,7 +116,7 @@ export default function Home() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
               <CardMedia
@@ -116,7 +126,12 @@ export default function Home() {
                 alt=""
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  className={styles.center}
+                >
                   Niderland
                 </Typography>
               </CardContent>
