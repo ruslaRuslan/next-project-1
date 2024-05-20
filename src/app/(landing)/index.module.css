@@ -1,21 +1,5 @@
-.container {
-  /* display: flex; */
-}
-
 .image {
-  /* width: 50%; */
-  /* height: 300px; */
   object-fit: cover;
-}
-
-.info {
-  width: max-content;
-  background-color: red;
-  text-align: center;
-}
-
-.h {
-  padding-left: 20px;
 }
 
 .container2 {

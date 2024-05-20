@@ -12,25 +12,48 @@ export default function Home() {
   return (
     <>
       <Grid container>
-        <Grid>
-          <Image
-            className={styles.image}
-            src="https://www.jedacademy.az/image/teacher/891676291256.jpg"
-            alt=""
-            width={800}
-            height={500}
-          />
+        <Grid xs={12} md={6} lg={5}>
+          <Card style={{ borderRadius: "0px" }}>
+            <CardMedia
+              style={{ border: "0 solid" }}
+              component="img"
+              height="500"
+              image="https://www.jedacademy.az/image/teacher/891676291256.jpg"
+              alt=""
+            />
+          </Card>
         </Grid>
-        <Grid style={{ background: "red" }} item xs={5} md={6}>
-          <Typography variant="h5">
-            Ali Muelim <br /> kursun bas direktoru ve telimcisi
-          </Typography>
-          <Button className={styles.button} variant="contained">
-            Contained
-          </Button>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt nemo
-          </p>
+
+        <Grid xs={12} md={6} lg={7}>
+          <Card
+            className={styles.center}
+            style={{
+              background: "#607070",
+              height: "100%",
+              color: "#fff",
+              borderRadius: "0px",
+            }}
+            height="500"
+          >
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                className={styles.center}
+              >
+                Ali Muelim <br /> kursun bas direktoru ve telimcisi
+              </Typography>
+              <Button className={styles.button} variant="contained">
+                Contained
+              </Button>
+            </CardContent>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
+              nemo Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore maiores amet ex nisi odio aliquid iusto. Ipsa debitis
+            </p>
+          </Card>
         </Grid>
       </Grid>
 
@@ -69,7 +92,11 @@ export default function Home() {
         How we can help
       </Typography>
 
-      <Grid container gap={2} justifyContent="center">
+      <Grid
+        container
+        justifyContent="center"
+        style={{ padding: "0 10px 0 11px" }}
+      >
         <Grid item xs={12} sm={6} md={4} lg={3} margin="5px">
           <Card sx={{ maxWidth: 445 }}>
             <CardActionArea>
@@ -140,9 +167,9 @@ export default function Home() {
         </Grid>
       </Grid>
 
-      <div className={styles.endButton}>
+      <Box className={styles.endButton}>
         <Button variant="contained">Explore Our Services</Button>
-      </div>
+      </Box>
     </>
   );
 }
