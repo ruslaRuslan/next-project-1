@@ -19,25 +19,25 @@ import Link from "next/link";
 
 const drawerWidth = 240;
 const navItems = [
-  <Link style={{ color: "black", textDecoration: "none" }} href="/" passHref>
+  <Link style={{ color: "#fff", textDecoration: "none" }} href="/" passHref>
     Home
   </Link>,
   <Link
-    style={{ color: "black", textDecoration: "none" }}
+    style={{ color: "#fff", textDecoration: "none" }}
     href="/about"
     passHref
   >
     About
   </Link>,
   <Link
-    style={{ color: "black", textDecoration: "none" }}
+    style={{ color: "#fff", textDecoration: "none" }}
     href="/contact"
     passHref
   >
     Contact
   </Link>,
   <Link
-    style={{ color: "black", textDecoration: "none" }}
+    style={{ color: "#fff", textDecoration: "none" }}
     href="/users"
     passHref
   >
@@ -54,8 +54,18 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", backgroundColor: "#1976D2" }}
+    >
+      <Typography
+        variant="h6"
+        sx={{
+          backgroundColor: "#1976D2",
+          padding: "15px",
+          color: "#fff",
+        }}
+      >
         Ruslan
       </Typography>
       <Divider />
@@ -125,6 +135,7 @@ function DrawerAppBar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              bgcolor: "#1976D2",
             },
           }}
         >
@@ -140,10 +151,6 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

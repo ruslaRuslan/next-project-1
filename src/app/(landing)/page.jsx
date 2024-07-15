@@ -1,5 +1,4 @@
 import * as React from "react";
-import Image from "next/image";
 import styles from "./index.module.css";
 import { Box, Button, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -98,6 +97,7 @@ export default function Home() {
         container
         justifyContent="center"
         style={{ padding: "0 10px 0 11px" }}
+        width="auto"
       >
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <Card sx={{ maxWidth: 445 }}>

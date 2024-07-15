@@ -1,16 +1,14 @@
-import axios from "axios";
-import * as React from "react";
+import { CardActionArea, Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, Grid } from "@mui/material";
+import axios from "axios";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 const url = "https://jsonplaceholder.typicode.com/users/";
 
 export default async function index({ params }) {
-  const { data } = await axios.get(url + params.id);
-
   return (
     <Grid
       container
@@ -29,43 +27,43 @@ export default async function index({ params }) {
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               <p style={{ textAlign: "center" }}>
-                <b>№ {data.id}</b>
+                <b>№ {user.id}</b>
               </p>
               <p>
                 <b>name: </b>
-                {data.name}
+                {user.name}
               </p>
               <p>
                 <b>username: </b>
-                {data.username}
+                {user.username}
               </p>
               <p>
                 <b>email: </b>
-                <Link href="">{data.email}</Link>
+                <Link href="">{user.email}</Link>
               </p>
               <p>
                 <b>street: </b>
-                {data.address.street}
+                {user.address.street}
               </p>
               <p>
                 <b>suite: </b>
-                {data.address.suite}
+                {user.address.suite}
               </p>
               <p>
                 <b>city: </b>
-                {data.address.city}
+                {user.address.city}
               </p>
               <p>
                 <b>zipcode: </b>
-                {data.address.zipcode}
+                {user.address.zipcode}
               </p>
               <p>
                 <b>lat: </b>
-                {data.address.geo.lat}
+                {user.address.geo.lat}
               </p>
               <p>
                 <b>lng: </b>
-                {data.address.geo.lng}
+                {user.address.geo.lng}
               </p>
             </Typography>
             <Typography variant="body2" color="text.secondary"></Typography>
