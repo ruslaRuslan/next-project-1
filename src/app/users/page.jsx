@@ -14,7 +14,7 @@ export default async function index() {
     <>
       {data.map(({ id, name }) => {
         return (
-          <Box>
+          <Box key={id}>
             <Card
               sx={{
                 maxWidth: 345,

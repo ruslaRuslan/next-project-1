@@ -9,6 +9,12 @@ import { notFound } from "next/navigation";
 const url = "https://jsonplaceholder.typicode.com/users/";
 
 export default async function index({ params }) {
+  let user = {};
+  try {
+    user = (await axios.get(url + params.id)).data;
+  } catch (error) {
+    notFound();
+  }
   return (
     <Grid
       container
