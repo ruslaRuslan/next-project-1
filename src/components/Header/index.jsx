@@ -19,30 +19,51 @@ import Link from "next/link";
 
 const drawerWidth = 240;
 const navItems = [
-  <Link style={{ color: "#fff", textDecoration: "none" }} href="/" passHref>
-    Home
-  </Link>,
-  <Link
-    style={{ color: "#fff", textDecoration: "none" }}
-    href="/about"
-    passHref
-  >
-    About
-  </Link>,
-  <Link
-    style={{ color: "#fff", textDecoration: "none" }}
-    href="/contact"
-    passHref
-  >
-    Contact
-  </Link>,
-  <Link
-    style={{ color: "#fff", textDecoration: "none" }}
-    href="/users"
-    passHref
-  >
-    Users
-  </Link>,
+  // <Link style={{ color: "#fff", textDecoration: "none" }} href="/" passHref>
+  //   Home
+  // </Link>,
+  // <Link
+  //   style={{ color: "#fff", textDecoration: "none" }}
+  //   href="/about"
+  //   passHref
+  // >
+  //   About
+  // </Link>,
+  // <Link
+  //   style={{ color: "#fff", textDecoration: "none" }}
+  //   href="/contact"
+  //   passHref
+  // >
+  //   Contact
+  // </Link>,
+  // <Link
+  //   style={{ color: "#fff", textDecoration: "none" }}
+  //   href="/users"
+  //   passHref
+  // >
+  //   Users
+  // </Link>,
+
+  {
+    id: 1,
+    title: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    title: "About",
+    href: "/about",
+  },
+  {
+    id: 3,
+    title: "Contact",
+    href: "/contact",
+  },
+  {
+    id: 4,
+    title: "Users",
+    href: "/users",
+  },
 ];
 
 function DrawerAppBar(props) {
@@ -70,12 +91,12 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+        {navItems.map(({ id, title, href }) => (
+          <div key={id}>
+            <a href={href} style={{ color: "#fff", textDecoration: "none" }}>
+              {title}
+            </a>
+          </div>
         ))}
       </List>
     </Box>
@@ -105,18 +126,21 @@ function DrawerAppBar(props) {
           >
             Ruslanin ilk lahiyesi 🧐
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  "& > a": {
-                    color: "#fff !important",
-                  },
-                }}
-              >
-                {item}
-              </Button>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex", lg: "flex" },
+              gap: 5,
+            }}
+          >
+            {navItems.map(({ id, title, href }) => (
+              <div key={id}>
+                <a
+                  href={href}
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
+                  {title}
+                </a>
+              </div>
             ))}
           </Box>
         </Toolbar>
